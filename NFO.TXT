@@ -1,0 +1,28 @@
+Necessary scripts (install them in pycharm terminal using the following commands):
+
+pip install pillow
+pip install opencv-python
+pip install cvzone
+pip install mediapipe
+
+SCRIPT RUNNING ORDER:
+
+Run EXTRACT_FRAMES.py to extract frames from your video.
+Ensure the video file is in the expected location.
+Output folder: COLOR_CORRECTED.
+
+Run COLORTEMP.py to apply color temperature adjustments or other processing to the extracted frames.
+Ensure COLOR_CORRECTED is populated with frames extracted by EXTRACT_FRAMES.py.
+Output folder: COLOR_CORRECTED_TEMP.
+
+Run POSE_DETECTOR.py to detect poses and save the images with skeletons.
+Ensure COLOR_CORRECTED_TEMP is populated with frames processed by COLORTEMP.py.
+Output folder: POSED.
+
+Run BACKGROUND.py to overlay the skeletons onto a solid color background.
+Ensure COLOR_CORRECTED_TEMP and POSED are populated with the original and skeleton-detected frames respectively.
+Output folder: DRAWN.
+
+ 
+
+
